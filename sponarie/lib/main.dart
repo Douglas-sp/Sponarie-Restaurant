@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sponarie/screens/Logininpage.dart';
 import 'package:sponarie/screens/SignupScreen.dart';
 
 void main(){
@@ -16,7 +17,8 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SignupsScreen(),
+      //home: SignupsScreen(),
+      home: LoginPage(),
     );
   }
 }

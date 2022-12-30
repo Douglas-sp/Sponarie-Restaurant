@@ -64,9 +64,11 @@ class _SignupsScreenState extends State<SignupsScreen> {
               textInputAction: TextInputAction.next,
               decoration: InputDecoration(
                   border: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.blue),
+                      //borderSide: BorderSide(color: Colors.blue),
                       borderRadius: BorderRadius.all(Radius.circular(12.0))),
-                  label: Text('Name'))),
+                  label: Text('Name')
+                  )
+                  ),
         ),
         SizedBox(
           height: 20.0,

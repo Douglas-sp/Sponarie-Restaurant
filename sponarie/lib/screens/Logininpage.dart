@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_form_builder/flutter_form_builder.dart';
 
 
 
@@ -49,12 +50,56 @@ class _LoginPageState extends State<LoginPage> {
             ),
 
             SizedBox(height: 70.0,),
-            Text("Log In",
-            style: TextStyle(color: Colors.black87,
-            fontWeight: FontWeight.bold,
-            fontSize: 25.0),
-            )         
+            
+            Center(
+              child: Text("Log In",
+              style: TextStyle(color: Colors.black87,
+              fontWeight: FontWeight.bold,
+              fontSize: 25.0),
+              ),
+            ),
 
+            SizedBox(
+          height: 20.0,
+        ),
+
+        Padding(
+          padding: EdgeInsets.all(15.0),
+          child: FormBuilderTextField(
+              name: "user_name",
+              textInputAction: TextInputAction.next,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius:BorderRadius.all(Radius.circular(12.0)),
+                  
+                  ),
+                labelText:"User Name",
+                suffixIcon: Icon(Icons.person,
+                color: Colors.blue[700]
+                ),
+                hintText: "draymond",
+              ),
+              ),
+        ),
+
+              SizedBox(height: 30.0,),
+
+              Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: FormBuilderTextField(
+              name: 'password',
+              obscureText: true,
+              textInputAction: TextInputAction.done,
+              decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(12.0))),
+                  label:Text('Password'),
+                  suffixIcon: Icon(Icons.visibility,
+                  color: Colors.blue[700],)
+                  )
+                  ),
+                  
+        ),      
 
             
           ],
