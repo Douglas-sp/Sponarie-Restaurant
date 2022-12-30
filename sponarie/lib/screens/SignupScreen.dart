@@ -10,46 +10,53 @@ class SignupsScreen extends StatefulWidget {
 }
 
 class _SignupsScreenState extends State<SignupsScreen> {
+  DateTime _dateTime = DateTime(2022);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: SingleChildScrollView(
-      child: Column(
-        children: [
+      child: Column(children: [
         Padding(
-              padding: EdgeInsets.only(top: 65.0,left: 100.0,),
-              child: Row(
-                children: [
-                  Text("Sponarie",
-                  style: TextStyle(color: Colors.black87,
+          padding: EdgeInsets.only(
+            top: 65.0,
+            left: 100.0,
+          ),
+          child: Row(
+            children: [
+              Text(
+                "Sponarie",
+                style: TextStyle(
+                  color: Colors.black87,
                   fontWeight: FontWeight.bold,
                   fontSize: 20.0,
                   //fontFamily:"Hindi",
-                  )
-                  ,)
-                ],              
-            ),              
-            ),
-
-            Padding(
-              padding: EdgeInsets.only(left: 125.0,),
-              child: Row(
-                children: [
-                  Text("Restaurant",
-                  style: TextStyle(color: Color.fromARGB(255, 8, 132, 234),
+                ),
+              )
+            ],
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(
+            left: 125.0,
+          ),
+          child: Row(
+            children: [
+              Text(
+                "Restaurant",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 8, 132, 234),
                   fontWeight: FontWeight.bold,
                   fontSize: 20.0,
                   //fontFamily:"Hindi",
-                  )
-                  ,)
-                ],              
-            ),              
-            ),
-
-            SizedBox(
+                ),
+              )
+            ],
+          ),
+        ),
+        SizedBox(
           height: 70.0,
         ),
-
         Text(
           'Sign Up',
           style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold),
@@ -66,7 +73,8 @@ class _SignupsScreenState extends State<SignupsScreen> {
                   border: OutlineInputBorder(
                       //borderSide: BorderSide(color: Colors.blue),
                       borderRadius: BorderRadius.all(Radius.circular(12.0))),
-                  label: Text('Name')
+                  label: Text('Name'),
+                  hintText: "Crescentia",
                   )
                   ),
         ),
@@ -84,10 +92,28 @@ class _SignupsScreenState extends State<SignupsScreen> {
                     borderSide: BorderSide(color: Colors.blue),
                     borderRadius: BorderRadius.all(Radius.circular(12.0))),
                 label: Text('Email'),
+                hintText: "name@example.com",
               )),
         ),
         SizedBox(
           height: 20.0,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: FormBuilderTextField(
+              name: 'dob',
+              textInputAction: TextInputAction.next,
+              decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                      //borderSide: BorderSide(color: Colors.blue),
+                      borderRadius: BorderRadius.all(Radius.circular(12.0))),
+                  label: Text('Date of Birth'),
+                  hintText: "${_dateTime.day}-${_dateTime.month}-${_dateTime.year}",
+                  )
+                  ),
+        ),
+        SizedBox(
+          height: 27.0,
         ),
         Padding(
           padding: const EdgeInsets.all(15.0),
@@ -100,7 +126,10 @@ class _SignupsScreenState extends State<SignupsScreen> {
                       borderSide: BorderSide(color: Colors.blue),
                       borderRadius: BorderRadius.all(Radius.circular(12.0))),
                   labelText: 'Password',
-                  suffixIcon: Icon(Icons.visibility))),
+                  hintText: "min. 8 characters",
+                  suffixIcon: Icon(Icons.visibility)
+                  )
+                  ),
         ),
         SizedBox(
           height: 30.0,

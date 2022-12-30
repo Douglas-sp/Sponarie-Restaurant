@@ -84,7 +84,7 @@ class _LoginPageState extends State<LoginPage> {
 
               SizedBox(height: 30.0,),
 
-              Padding(
+        Padding(
           padding: const EdgeInsets.all(15.0),
           child: FormBuilderTextField(
               name: 'password',
@@ -99,11 +99,25 @@ class _LoginPageState extends State<LoginPage> {
                   )
                   ),
                   
-        ),      
+        ),
 
+        SizedBox(height: 20.0,),    
+
+        ElevatedButton(
+          onPressed: (){}, 
+          child: Text("LOGIN",),
+          style: ElevatedButton.styleFrom(fixedSize: Size(336, 45)),
+        ),
+    
+        SizedBox(height: 27.0,),  
+
+        InkWell()
+           
             
           ],
-        )),
+        )
+
+        ),
 
     );
   }
