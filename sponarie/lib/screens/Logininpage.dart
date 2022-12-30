@@ -46,9 +46,14 @@ class _LoginPageState extends State<LoginPage> {
                   ,)
                 ],              
             ),              
-            )
+            ),
 
-            
+            SizedBox(height: 70.0,),
+            Text("Log In",
+            style: TextStyle(color: Colors.black87,
+            fontWeight: FontWeight.bold,
+            fontSize: 25.0),
+            )         
 
 
             
