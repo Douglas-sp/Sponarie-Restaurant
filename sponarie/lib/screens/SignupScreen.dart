@@ -62,7 +62,7 @@ class _SignupsScreenState extends State<SignupsScreen> {
           style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold),
         ),
         SizedBox(
-          height: 50.0,
+          height: 20.0,
         ),
         Padding(
           padding: const EdgeInsets.all(15.0),
@@ -98,22 +98,22 @@ class _SignupsScreenState extends State<SignupsScreen> {
         SizedBox(
           height: 20.0,
         ),
-        Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: FormBuilderTextField(
-              name: 'dob',
-              textInputAction: TextInputAction.next,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      //borderSide: BorderSide(color: Colors.blue),
-                      borderRadius: BorderRadius.all(Radius.circular(12.0))),
-                  label: Text('Date of Birth'),
-                  hintText: "${_dateTime.day}-${_dateTime.month}-${_dateTime.year}",
-                  )
-                  ),
-        ),
+        // Padding(
+        //   padding: const EdgeInsets.all(15.0),
+        //   child: FormBuilderTextField(
+        //       name: 'dob',
+        //       textInputAction: TextInputAction.next,
+        //       decoration: InputDecoration(
+        //           border: OutlineInputBorder(
+        //               //borderSide: BorderSide(color: Colors.blue),
+        //               borderRadius: BorderRadius.all(Radius.circular(12.0))),
+        //           label: Text('Date of Birth'),
+        //           hintText: "${_dateTime.day}-${_dateTime.month}-${_dateTime.year}",
+        //           )
+        //           ),
+        // ),
         SizedBox(
-          height: 27.0,
+          height: 20.0,
         ),
         Padding(
           padding: const EdgeInsets.all(15.0),
@@ -132,7 +132,7 @@ class _SignupsScreenState extends State<SignupsScreen> {
                   ),
         ),
         SizedBox(
-          height: 30.0,
+          height: 27.0,
         ),
         ElevatedButton(
           onPressed: () {},
