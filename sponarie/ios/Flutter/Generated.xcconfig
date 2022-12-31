@@ -1,6 +1,6 @@
 // This is a generated file; do not edit or check into version control.
-FLUTTER_ROOT=D:\tools\flutter
-FLUTTER_APPLICATION_PATH=C:\Users\Raymond\Desktop\Code\flutter\Sponarie-Restaurant\sponarie
+FLUTTER_ROOT=C:\src\flutter
+FLUTTER_APPLICATION_PATH=C:\Users\Scentia\Desktop\Sponarie-Restaurant\sponarie
 COCOAPODS_PARALLEL_CODE_SIGN=true
 FLUTTER_TARGET=lib\main.dart
 FLUTTER_BUILD_DIR=build
