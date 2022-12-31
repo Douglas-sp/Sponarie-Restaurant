@@ -86,12 +86,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "material",
-      "rootUri": "file:///D:/tools/flutter/.pub-cache/hosted/pub.dartlang.org/material-1.0.0+2",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "material_color_utilities",
       "rootUri": "file:///D:/tools/flutter/.pub-cache/hosted/pub.dartlang.org/material_color_utilities-0.1.5",
       "packageUri": "lib/",
@@ -164,7 +158,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2022-12-30T20:20:56.912690Z",
+  "generated": "2022-12-31T06:52:46.795383Z",
   "generator": "pub",
   "generatorVersion": "2.18.6"
 }
