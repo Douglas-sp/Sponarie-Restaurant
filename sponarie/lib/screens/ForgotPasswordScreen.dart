@@ -57,7 +57,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           ),//---header end--,
         ),
         
-        SizedBox(height: 70,),
+        SizedBox(height: 100,),
 
         
        Container(
@@ -91,9 +91,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
 
                   SizedBox(height: 20,),
 
-                  Text('Enter email address', 
-                  textAlign: TextAlign.left,),
-
+                  
                   FormBuilderTextField(
                     name: 'Email',
                     decoration: InputDecoration(

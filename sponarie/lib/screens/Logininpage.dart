@@ -63,88 +63,86 @@ class _LoginPageState extends State<LoginPage> {
 
              SizedBox(height: 20.0,),
 
-         Padding(
-           padding: EdgeInsets.all(15.0),
-           child: FormBuilderTextField(
-               name: "user_name",
-               textInputAction: TextInputAction.next,
-               decoration: InputDecoration(
-                 border: OutlineInputBorder(
-                   borderRadius:BorderRadius.all(Radius.circular(12.0)),
-                 ),
-                 labelText:"User Name",
-                 suffixIcon: Icon(Icons.person,
-                 color: Colors.blue[700]
-                 ),
-                 hintText: "draymond",
-               ),
-          ),
-         ),
+             Container(
+               padding: EdgeInsets.all(30),
+               child: Column(
+                children: [
+                  FormBuilderTextField(
+                    name: "user_name",
+                    textInputAction: TextInputAction.next,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                      borderRadius:BorderRadius.all(Radius.circular(12.0)),
+                       ),
+                      labelText:"User Name",
+                      suffixIcon: Icon(Icons.person,
+                      color: Colors.blue[700]
+                      ),
+                      hintText: "draymond",
+                    ),
+                  ),
 
-               SizedBox(height: 30.0,),
+                   SizedBox(height: 30.0,),
 
-         Padding(
-           padding: const EdgeInsets.all(15.0),
-           child: FormBuilderTextField(
-               name: 'password',
-               obscureText: true,
-               textInputAction: TextInputAction.done,
-               decoration: InputDecoration(
-                   border: OutlineInputBorder(
-                     borderRadius: BorderRadius.all(Radius.circular(12.0))),
-                   label:Text('Password'),
-                   suffixIcon: Icon(Icons.visibility,
-                   color: Colors.blue[700],)
-                   )
-                   ),
-                  
-         ),
+                  FormBuilderTextField(
+                    name: 'password',
+                    obscureText: true,
+                    textInputAction: TextInputAction.done,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(12.0))),
+                    label:Text('Password'),
+                    suffixIcon: Icon(Icons.visibility,
+                    color: Colors.blue[700],)
+                    )
+                  ),
 
-         SizedBox(height: 20.0,),    
+                SizedBox(height: 20.0,),   
 
-         ElevatedButton(
-           onPressed: (){}, 
-           child: Text("LOGIN",),
-           style: ElevatedButton.styleFrom(),
-         ),
+                ElevatedButton(
+                  onPressed: (){}, 
+                  child: Text("LOGIN",),
+                  style: ElevatedButton.styleFrom(),
+                ),
     
-        SizedBox(height: 27.0,), 
+                SizedBox(height: 27.0,), 
 
-        InkWell(
-          onTap: () {
-            Navigator.push(context, MaterialPageRoute(
-              builder: ((context) => ForgotPassword() )
-            )
-            );
-          },
+                InkWell(
+                 onTap: () {
+                  Navigator.push(context, MaterialPageRoute(
+                   builder: ((context) => ForgotPassword() )
+                  )
+                  );
+                },
 
-          child: Text("Forgot Password?",
-          style: TextStyle(color:  Color.fromARGB(255, 8, 132, 234),
-          fontWeight: FontWeight.bold,
-          fontSize: 15.0),
-        ),
+                child: Text("Forgot Password?",
+                style: TextStyle(color:  Color.fromARGB(255, 8, 132, 234),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15.0),
+                ),
 
-        ), 
+               ), 
 
         
-        SizedBox(height: 180.0,),
+               SizedBox(height: 180.0,),
         
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Dont have an account?',
-              style: TextStyle(fontSize: 15.0),
-            ),
-            InkWell(
-              onTap: (() {
-                Navigator.push(
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Dont have an account?',
+                      style: TextStyle(fontSize: 15.0),
+                  ),
+            
+              InkWell(
+                 onTap: (() {
+                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) =>SignupsScreen(),
                   ),
                 );
-              }),
+                }),
               child: Text(
                 'Sign Up',
                 style: TextStyle(
@@ -153,10 +151,26 @@ class _LoginPageState extends State<LoginPage> {
                     fontWeight: FontWeight.bold),
               ),
             )
-          ],
-        )
+            ],
+            )
 
-        
+         
+
+                
+                ],
+               ),
+             )
+
+         
+               
+         //Padding(
+           //padding: const EdgeInsets.all(15.0),
+            
+                  
+        // ),
+
+         
+         
            
             
           ],
