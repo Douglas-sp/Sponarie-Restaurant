@@ -56,19 +56,21 @@ class _SignupsScreenState extends State<SignupsScreen> {
           ),
         ),
         //---header end--
-        SizedBox(
-          height: 70.0,
-        ),
+        SizedBox(height: 70.0,),
+
         Text(
           'Sign Up',
           style: TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold),
         ),
-        SizedBox(
-          height: 20.0,
-        ),
-        Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: FormBuilderTextField(
+
+        SizedBox(height: 15.0,),
+
+        Container(
+          padding: EdgeInsets.all(30),
+          child: Column(
+            children: [
+              
+              FormBuilderTextField(
               name: 'Full Name',
               textInputAction: TextInputAction.next,
               decoration: InputDecoration(
@@ -79,13 +81,10 @@ class _SignupsScreenState extends State<SignupsScreen> {
                   hintText: "Crescentia",
                   )
                   ),
-        ),
-        SizedBox(
-          height: 20.0,
-        ),
-        Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: FormBuilderTextField(
+
+              SizedBox(height: 30.0,),
+
+              FormBuilderTextField(
               name: 'Email',
               keyboardType: TextInputType.emailAddress,
               textInputAction: TextInputAction.next,
@@ -95,31 +94,12 @@ class _SignupsScreenState extends State<SignupsScreen> {
                     borderRadius: BorderRadius.all(Radius.circular(12.0))),
                 label: Text('Email'),
                 hintText: "name@example.com",
-              )),
-        ),
-        SizedBox(
-          height: 20.0,
-        ),
-        // Padding(
-        //   padding: const EdgeInsets.all(15.0),
-        //   child: FormBuilderTextField(
-        //       name: 'dob',
-        //       textInputAction: TextInputAction.next,
-        //       decoration: InputDecoration(
-        //           border: OutlineInputBorder(
-        //               //borderSide: BorderSide(color: Colors.blue),
-        //               borderRadius: BorderRadius.all(Radius.circular(12.0))),
-        //           label: Text('Date of Birth'),
-        //           hintText: "${_dateTime.day}-${_dateTime.month}-${_dateTime.year}",
-        //           )
-        //           ),
-        // ),
-        SizedBox(
-          height: 20.0,
-        ),
-        Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: FormBuilderTextField(
+              )
+              ),
+
+              SizedBox(height: 30.0,),
+
+              FormBuilderTextField(
               name: 'Password',
               obscureText: true,
               textInputAction: TextInputAction.done,
@@ -132,30 +112,29 @@ class _SignupsScreenState extends State<SignupsScreen> {
                   suffixIcon: Icon(Icons.visibility)
                   )
                   ),
-        ),
-        SizedBox(
-          height: 27.0,
-        ),
-        ElevatedButton(
-          onPressed: () {},
-          child: Text('Sign Up'),
-          style: ElevatedButton.styleFrom(),
-        ),
-        SizedBox(
-          height: 40.0,
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Have an account already?',
-              style: TextStyle(fontSize: 15.0),
-            ),
-            InkWell(
+
+              SizedBox(height: 27.0,),
+
+              ElevatedButton(
+              onPressed: () {},
+              child: Text('Sign Up'),
+                style: ElevatedButton.styleFrom(),
+              ),
+
+              SizedBox(height: 120.0,),
+
+              Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+              Text(
+                'Have an account already?',
+                style: TextStyle(fontSize: 15.0),
+              ),
+
+              InkWell(
               onTap: (() {
                 Navigator.push(
-                  context,
-                  MaterialPageRoute(
+                  context,MaterialPageRoute(
                     builder: (context) => LoginPage(),
                   ),
                 );
@@ -167,9 +146,18 @@ class _SignupsScreenState extends State<SignupsScreen> {
                     fontSize: 15.0,
                     fontWeight: FontWeight.bold),
               ),
-            )
-          ],
+              )
+              ],
+              )
+
+
+            ],
+          ),
         )
+
+        
+        
+        
       ]),
     ));
   }
