@@ -25,14 +25,14 @@ class _TrackOrderState extends State<TrackOrder> {
                 //   height: 132,
                 //   fit: BoxFit.cover,
                 // ),
-                Center(
-                  child: ListTile(
-                    title: Text("TRACK YOUR ORDER",
-                    style: TextStyle(fontWeight:FontWeight.bold, ),
-                    ),
-                    subtitle: Text("Enter your tracking number below"),
-                  ),
-                )
+                // Center(
+                //   child: ListTile(
+                //     title: Text("TRACK YOUR ORDER",
+                //     style: TextStyle(fontWeight:FontWeight.bold, ),
+                //     ),
+                //     subtitle: Text("Enter your tracking number below"),
+                //   ),
+                // )
 
               ],
             ),
