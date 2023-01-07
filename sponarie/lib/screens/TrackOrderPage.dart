@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
@@ -11,6 +12,12 @@ class TrackOrder extends StatefulWidget {
 class _TrackOrderState extends State<TrackOrder> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Column(
+        children: [
+          Icon(Icons.arrow_back)
+        ],
+      ),
+    );
   }
 }
