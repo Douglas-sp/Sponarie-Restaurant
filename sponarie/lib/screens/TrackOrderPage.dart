@@ -15,8 +15,28 @@ class _TrackOrderState extends State<TrackOrder> {
     return Scaffold(
       body: Column(
         children: [
-          Icon(Icons.arrow_back)
+          Icon(Icons.arrow_back),
+          Container(
+            child: Column(
+              children: [
+                // Image(
+                //   image: AssetImage("assets\images\Bike.png"),
+                //   width: 270,
+                //   height: 132,
+                //   fit: BoxFit.cover,
+                // ),
+                Center(
+                  child: ListTile(
+                    title: Text("TRACK YOUR ORDER",
+                    style: TextStyle(fontWeight:FontWeight.bold, ),
+                    ),
+                    subtitle: Text("Enter your tracking number below"),
+                  ),
+                )
 
+              ],
+            ),
+          )
           
         ],
       ),
