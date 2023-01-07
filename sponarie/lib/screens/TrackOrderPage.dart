@@ -33,6 +33,12 @@ class _TrackOrderState extends State<TrackOrder> {
                 //     subtitle: Text("Enter your tracking number below"),
                 //   ),
                 // )
+                Text("TRACK YOUR ORDER",
+                style: TextStyle(fontWeight:FontWeight.bold, ),
+                    ),
+                Text("Enter your tracking number below",
+                style: TextStyle(fontWeight:FontWeight.normal, ),
+                    ),
 
               ],
             ),
