@@ -13,9 +13,39 @@ class _TrackOrderState extends State<TrackOrder> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+<<<<<<< HEAD
       body: Container(
 
       )
+=======
+      body: Column(
+        children: [
+          Icon(Icons.arrow_back),
+          Container(
+            child: Column(
+              children: [
+                // Image(
+                //   image: AssetImage("assets\images\Bike.png"),
+                //   width: 270,
+                //   height: 132,
+                //   fit: BoxFit.cover,
+                // ),
+                // Center(
+                //   child: ListTile(
+                //     title: Text("TRACK YOUR ORDER",
+                //     style: TextStyle(fontWeight:FontWeight.bold, ),
+                //     ),
+                //     subtitle: Text("Enter your tracking number below"),
+                //   ),
+                // )
+
+              ],
+            ),
+          )
+          
+        ],
+      ),
+>>>>>>> spo
     );
   }
 }

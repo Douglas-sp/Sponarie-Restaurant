@@ -4,6 +4,10 @@ import 'package:sponarie/screens/LoadingPage.dart';
 import 'package:sponarie/screens/Logininpage.dart';
 import 'package:sponarie/screens/SignupScreen.dart';
 import 'package:sponarie/screens/TrackOrderPage.dart';
+<<<<<<< HEAD
+=======
+
+>>>>>>> spo
 
 void main(){
   runApp(MyApp());
@@ -22,6 +26,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
 <<<<<<< HEAD
       //  home: SignupsScreen(),
+<<<<<<< HEAD
       home: TrackOrder(),
       //home: LoadingPage(),           
 =======
@@ -30,6 +35,11 @@ class _MyAppState extends State<MyApp> {
         home: Home1(),
       //home: LoadingPage(),      
 >>>>>>> mar
+=======
+      //home: LoginPage(),
+      //home: LoadingPage(),
+      home: TrackOrder(),      
+>>>>>>> spo
     );
   }
 }
