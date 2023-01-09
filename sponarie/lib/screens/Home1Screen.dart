@@ -16,8 +16,9 @@ class _Home1State extends State<Home1> {
       body: SingleChildScrollView(
         
         child: Container(
-          color: Color.fromARGB(0, 120, 121, 122),
+          color: Color.fromARGB(0, 58, 58, 58),
           child: Container(
+            color: Color.fromARGB(0, 58, 58, 58),
             padding: EdgeInsets.only(top: 50, left: 20, right: 20),
             child: Column(
               children: [
@@ -79,6 +80,7 @@ class _Home1State extends State<Home1> {
                 SizedBox(height: 50,),
               
                 Container(
+                  padding: EdgeInsets.all(15),
                   width:400,
                   height: 180,
                   decoration: BoxDecoration(
@@ -86,29 +88,110 @@ class _Home1State extends State<Home1> {
                     color: Colors.white
                   ),
 
-                  child: Row(
-                    children: [
-                        Column(
-                          children: [
-                            Image(
-                              image: AssetImage('assets/images/store.png'),
-                            ),
-                            Text('')
-                          ],
-                        ),
+                    child: Row(
+                      children: [
+                          Column(
+                          
+                            children: [
+                              Image(
+                                image: AssetImage('assets/images/store.png'),
+                              ),
+                              SizedBox(height: 15,),
+                              Text('Store Pickup', style:TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
+                              SizedBox(height: 10,),
+                              Text('Best quality', style:TextStyle(fontWeight: FontWeight.normal)),
+                            ],
+                          ),
 
-                        Column(
-                          children: [
-                            Image(
-                              image: AssetImage('assets/images/delivery.png'),
-                            ),
-                          ],
-                        )
+                          SizedBox(width: 120,),
 
-                    ],
-                    )
-                )
+                          Column(
+                            children: [
+                              Image(
+                                image: AssetImage('assets/images/delivery.png'),
+                              ),
+                              SizedBox(height: 15,),
+                              Text('Delivery', style:TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
+                              SizedBox(height: 10,),
+                              Text('Always on time', style:TextStyle(fontWeight: FontWeight.normal)),
+                            ],
+                          )
+
+                      ],
+                      ),
+                  ),
+
+                SizedBox(height: 20,),
+
+                Container(
+                  padding: EdgeInsets.only(top: 30),
+                  width:400,
+                  height: 180,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(18)),
+                    color: Colors.white
+                  ),
+
+                    child: Row(
+                      children: [
+                        
+                          Padding(
+                            padding: const EdgeInsets.only(top: 30),
+                            child: Column(
+                              children: [
+                                Text('Online reservation', style:TextStyle(fontWeight: FontWeight.w600, fontSize: 16),),
+                                Text('Table booking', style:TextStyle(fontSize: 14, ), textAlign: TextAlign.start,),
+                                SizedBox(height: 20,),
+                                OutlinedButton.icon( // <-- OutlinedButton
+                                  onPressed: () {},
+                                  icon: Icon(
+                                        Icons.table_restaurant,
+                                        size: 24.0,
+                                    ),
+                                  label: Text('Reserve a table'),
+                                  style: OutlinedButton.styleFrom(
+                                      side:BorderSide(color: Colors.blue),
+                                      
+                                    ),
+                                ),
+                                
+                              ],
+                            ),
+                          ),
+                          SizedBox(width: 40,),
+
+                          Column(
+                            children: [
+                              Image(
+                                image: AssetImage('assets/images/reservation.png'),
+                              ),
+
+                              SizedBox(height: 15,),
+
+                              OutlinedButton( // <-- OutlinedButton
+                                  onPressed: () {},
+                                  child: Text('My reservations'),
+                                  style: OutlinedButton.styleFrom(
+                                      side:BorderSide(color: Colors.blue),
+                                      
+                                    ),
+                                ),
+                            ],
+                          ),
+
+                          
+
+                      ],
+                      ),
+
+                      
+                  ),
               
+                SizedBox(height: 20,),
+
+                ListTile(
+                  title: Text('Promotion Campaign', style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
+                )
               ],
             ),
           ),
