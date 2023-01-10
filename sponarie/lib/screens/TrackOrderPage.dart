@@ -14,25 +14,25 @@ class _TrackOrderState extends State<TrackOrder> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-<<<<<<< HEAD
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              padding: EdgeInsets.only(top: 100.0),
-              child: ListTile(
-                leading:Icon(
-                  Icons.arrow_circle_left_outlined),
-                  iconColor: Colors.black,
-                  )
-              //child: Icon(Icons.arrow_back),
-              
-=======
-<<<<<<< HEAD
-      body: Container(
 
-      )
-=======
+      // body: SingleChildScrollView(
+      //   child: Column(
+      //     children: [
+      //       Container(
+      //         padding: EdgeInsets.only(top: 100.0),
+      //         child: ListTile(
+      //           leading:Icon(
+      //             Icons.arrow_circle_left_outlined),
+      //             iconColor: Colors.black,
+      //             )
+      //         //child: Icon(Icons.arrow_back),
+              
+
+
+      // body: Container(
+
+      // )
+
       body: Column(
         children: [
           Icon(Icons.arrow_back),
@@ -53,77 +53,74 @@ class _TrackOrderState extends State<TrackOrder> {
                 //     subtitle: Text("Enter your tracking number below"),
                 //   ),
                 // )
-
-              ],
->>>>>>> main
-            ),
             
-            Container(
-              color: Color.fromARGB(255, 161, 195, 230),
+            
+                Container(
+                  color: Color.fromARGB(255, 161, 195, 230),
                   width: 600.0,
                   height: 800.0,
               
-              margin: EdgeInsets.only(top: 5),
-              padding: EdgeInsets.all(40),
-              child: Column(
-                children: [
-                  Image(
-                    image: AssetImage("assets/images/Bike.png"),
-                  ),
-      
-                  SizedBox(height: 50.0,),
-      
-                  Text("TRACK YOUR ORDER",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold, fontSize: 18.0,
-                  ),
-                  ),
-      
-                  SizedBox(height: 20.0,),
-      
-      
-                  Text("Enter your track number before below",
-                  style: TextStyle(
-                    fontWeight: FontWeight.normal, fontSize: 11.5,
-                  ),
-                  ),
-      
-                  SizedBox(height: 30.0,),
-      
-                  FormBuilderTextField(
-                    name: "name",
-                    decoration: InputDecoration(
-                      hintText: "Tracking number",
-                      fillColor: Colors.white, filled: true,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15.0),
-                        borderSide: BorderSide(color: Colors.white, width: 2.0)
+                  margin: EdgeInsets.only(top: 5),
+                  padding: EdgeInsets.all(40),
+                  child: Column(
+                    children: [
+                      Image(
+                        image: AssetImage("assets/images/Bike.png"),
+                        ),
+        
+                      SizedBox(height: 50.0,),
+        
+                      Text("TRACK YOUR ORDER",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 18.0,
                       ),
-                      
-                    ),
-                    ),
+                      ),
+        
+                      SizedBox(height: 20.0,),
+        
+        
+                      Text("Enter your track number below",
+                      style: TextStyle(
+                        fontWeight: FontWeight.normal, fontSize: 11.5,
+                      ),
+                      ),
+
+                      SizedBox(height: 30.0,),
+        
+                      FormBuilderTextField(
+                        name: "name",
+                        decoration: InputDecoration(
+                          hintText: "Tracking number",
+                          fillColor: Colors.white, filled: true,
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                            borderSide: BorderSide(color: Colors.white, width: 2.0)
+                          ),
+                        
+                        ),
+                      ),
+        
+                      SizedBox(height: 30.0,),
+        
+        
+                      ElevatedButton(
+                        onPressed: (){},
+                        child: Text("TRACK YOUR ORDER",
+                        ),
+                        // style: ButtonStyle(
+                        //  backgroundColor: C
+                        //  ),
+                      ),      
       
-                    SizedBox(height: 30.0,),
-      
-      
-                    ElevatedButton(
-                      onPressed: (){},
-                       child: Text("TRACK YOUR ORDER",                     
-                       ),
-                      // style: ButtonStyle(
-                      //  backgroundColor: C
-                      //  ),
-                    )
-      
-      
-      
-                ],
-              ),
-            )
-          ],
-        ),
+        
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+        ],
       ),
->>>>>>> spo
-    );
+    ); 
   }
 }

@@ -22,16 +22,13 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       //  home: SignupsScreen(),
 
-      home: TrackOrder(),
+      //home: TrackOrder(),
       //home: LoadingPage(),           
        //home: SignupsScreen(),
-      //home: LoginPage(),
+      home: LoginPage(),
         //home: Home1(),
       //home: LoadingPage(),      
-
-      //home: LoginPage(),
-      //home: LoadingPage(),
-      //home: TrackOrder(),      
+       
 
     );
   }
