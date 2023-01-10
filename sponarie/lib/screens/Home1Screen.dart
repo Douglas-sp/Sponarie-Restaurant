@@ -22,7 +22,7 @@ class _Home1State extends State<Home1> {
             padding: EdgeInsets.only(top: 50, left: 20, right: 20),
             child: Column(
               children: [
-              
+                
                 ListTile(
                   title: Text('Welcome to', style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15) ,),
                   subtitle: Text("Sponarie Restaurant",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black),),
@@ -133,11 +133,13 @@ class _Home1State extends State<Home1> {
                   ),
 
                     child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         
                           Padding(
                             padding: const EdgeInsets.only(top: 30),
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text('Online reservation', style:TextStyle(fontWeight: FontWeight.w600, fontSize: 16),),
                                 Text('Table booking', style:TextStyle(fontSize: 14, ), textAlign: TextAlign.start,),
@@ -190,13 +192,101 @@ class _Home1State extends State<Home1> {
                 SizedBox(height: 20,),
 
                 ListTile(
-                  title: Text('Promotion Campaign', style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
+                  title: Text('Promotion Campaign', style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18), textAlign: TextAlign.start,
+                  ),
+                ),
+
+                Row(
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Image(
+                          image: AssetImage('assets/images/Image1.png'),
+                        ),
+                        SizedBox( height: 10),
+                        Text('Discount all Excelsa'),
+                        Text('20% in all stores'),
+                      ],
+                    ),
+                    SizedBox(width: 25,),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Image(
+                          image: AssetImage('assets/images/Image2.png'),
+                        ),
+                        SizedBox( height: 10),
+                        Text('Discount all Liberica'),
+                        Text('20% in all stores'),
+                      ],
+                    )
+                  ],
+                ),
+
+                SizedBox( height: 20),
+
+                Row(
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Image(
+                          image: AssetImage('assets/images/Image3.png'),
+                        ),
+                        SizedBox( height: 10),
+                        Text('Discount all Liberica'),
+                        Text('20% in all stores'),
+                        
+                      ],
+                    ),
+                    SizedBox(width: 25,),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Image(
+                          image: AssetImage('assets/images/Image4.png'),
+                        ),
+                        SizedBox( height: 10),
+                        Text('Discount all Liberica'),
+                        Text('20% in all stores'),
+                      ],
+                    )
+                  ],
                 )
+
+
               ],
             ),
           ),
         ),
       ),
+
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+         
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home'
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.store),
+            label: 'Stores'
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.book),
+            label: 'Orders'
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile'
+          ),
+        ]
+        ),
+
+      
+      
     );
   }
 }
