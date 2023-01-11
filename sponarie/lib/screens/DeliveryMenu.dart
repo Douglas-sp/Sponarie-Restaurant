@@ -58,7 +58,7 @@ class _DeliveryMenuState extends State<DeliveryMenu> {
             ),
 
             title: Padding(
-              padding: const EdgeInsets.only(bottom: 6.0),
+              padding: const EdgeInsets.only(bottom: 6.0, top: 12.0),
               child: Text("Deliver to"),
             ),
             subtitle: Column(
