@@ -10,7 +10,7 @@ class DeliveryMenu extends StatefulWidget {
   State<DeliveryMenu> createState() => _DeliveryMenuState();
 }
 
-// var Store_Location = ["Wandegeya","Bwaise","Kawempe","Ndejje","Karakaveni","Ntinda"];
+var Store_Location = ["Wandegeya","Bwaise","Kawempe","Ndejje","Karakaveni","Ntinda"];
 
 class _DeliveryMenuState extends State<DeliveryMenu> {
   @override
@@ -107,15 +107,15 @@ class _DeliveryMenuState extends State<DeliveryMenu> {
               ),
             ),
           ),
-          // FormBuilderDropdown(
-          //   name: "Location",
-          //   items: Store_Location.map(
-          //     (location) => DropdownMenuItem(
-          //       value: location,
-          //       child: Text(location),
-          //     )
-          //   ).toList(),
-          // )
+          FormBuilderDropdown(
+            name: "Location",
+            items: Store_Location.map(
+              (location) => DropdownMenuItem(
+                value: location,
+                child: Text(location),
+              )
+            ).toList(),
+          )
         ],
       ),
     );
