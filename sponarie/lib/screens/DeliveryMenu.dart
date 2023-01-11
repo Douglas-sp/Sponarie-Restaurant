@@ -10,113 +10,141 @@ class DeliveryMenu extends StatefulWidget {
   State<DeliveryMenu> createState() => _DeliveryMenuState();
 }
 
-var Store_Location = ["Wandegeya","Bwaise","Kawempe","Ndejje","Karakaveni","Ntinda"];
+List Store_Location = ["Wandegeya","Bwaise","Kawempe","Ndejje","Karakaveni","Ntinda"];
 
 class _DeliveryMenuState extends State<DeliveryMenu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          ListTile(
-            title: Text(
-              "Delivery",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 18.0,
+      body: Container(
+        padding: EdgeInsets.only(top: 50,),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ListTile(
+              title: Text(
+                "Delivery",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18.0,
+                ),
               ),
-            ),
-            leading: IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.arrow_back_ios_new_rounded,
-                color: Colors.black87,
+              leading: IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.arrow_back_ios_new_rounded,
+                  color: Colors.black87,
+                ),
               ),
-            ),
-            trailing: Wrap(
-              children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(Icons.search_rounded, color: Colors.black87),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.menu,
-                    color: Colors.black87,
+              trailing: Wrap(
+                children: [
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(Icons.search_rounded, color: Colors.black87),
                   ),
-                ),
-              ],
-            ),
-          ),
-          ListTile(
-            leading: CircleAvatar(
-              backgroundImage: AssetImage("assets/images/delivery.png"),
-            ),
-            title: Padding(
-              padding: const EdgeInsets.only(bottom: 6.0, top: 12.0),
-              child: Text("Deliver to"),
-            ),
-            subtitle: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "CoCIS, Makerere Pool Road",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black87,
-                  ),
-                ),
-                SizedBox(
-                  height: 6.0,
-                ),
-                //IntrinsicHeight(
-                //child:
-                Row(
-                  children: [
-                    Text("Crescentia"),
-                    SizedBox(
-                      width: 4,
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.menu,
+                      color: Colors.black87,
                     ),
-                    // VerticalDivider(
-                    //   thickness: 2,
-                    //   width: 20,
-                    //   color: Colors.black,
-                    // ),
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.black87,
-                        border: Border.all(),
-                        borderRadius: BorderRadius.circular(5.0),
+                  ),
+                ],
+              ),
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                backgroundImage: AssetImage("assets/images/delivery.png"),
+              ),
+              title: Padding(
+                padding: const EdgeInsets.only(bottom: 6.0, top: 12.0),
+                child: Text("Deliver to"),
+              ),
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "CoCIS, Makerere Pool Road",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black87,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 6.0,
+                  ),
+                  //IntrinsicHeight(
+                  //child:
+                  Row(
+                    children: [
+                      Text("Crescentia"),
+                      SizedBox(
+                        width: 4,
                       ),
-                    ),
+                      // VerticalDivider(
+                      //   thickness: 2,
+                      //   width: 20,
+                      //   color: Colors.black,
+                      // ),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.black87,
+                          border: Border.all(),
+                          borderRadius: BorderRadius.circular(5.0),
+                        ),
+                      ),
 
-                    SizedBox(
-                      width: 4,
-                    ),
-                    Text("0771358056"),
+                      SizedBox(
+                        width: 4,
+                      ),
+                      Text("0771358056"),
+                    ],
+                  ),
+                  //)
+                ],
+              ),
+              trailing: IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.arrow_forward_ios_rounded,
+                ),
+              ),
+            ),
+            // SizedBox(height: 2.0,),
+
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: FormBuilderDropdown(
+                name: "Location",
+                items: Store_Location.map(
+                  (location) => DropdownMenuItem(
+                    value: location,
+                    alignment: AlignmentDirectional.centerStart,
+                    child: Text(location),
+                  )
+                ).toList(),
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: "Select nearest store😊",
+                ),
+                
+              ),
+            ),
+
+            Row(
+              children: [
+                Column(
+                  children: [
+                    ListView.builder(itemBuilder: itemBuilder)
                   ],
                 ),
-                //)
+                Column(),
               ],
             ),
-            trailing: IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.arrow_forward_ios_rounded,
-              ),
-            ),
-          ),
-          FormBuilderDropdown(
-            name: "Location",
-            items: Store_Location.map(
-              (location) => DropdownMenuItem(
-                value: location,
-                child: Text(location),
-              )
-            ).toList(),
-          )
-        ],
+
+
+          ],
+        ),
       ),
     );
   }
