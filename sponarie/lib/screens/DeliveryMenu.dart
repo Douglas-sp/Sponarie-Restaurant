@@ -57,11 +57,18 @@ class _DeliveryMenuState extends State<DeliveryMenu> {
               backgroundImage:AssetImage("assets/images/delivery.png") ,
             ),
 
-            title: Text("Deliver to"),
+            title: Padding(
+              padding: const EdgeInsets.only(bottom: 6.0),
+              child: Text("Deliver to"),
+            ),
             subtitle: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("CoCIS, Makerere Pool Road"),
+                Text("CoCIS, Makerere Pool Road", style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black87,
+                ),),
+                SizedBox(height: 6.0,),
                 //IntrinsicHeight(
                   //child: 
                   Row(
@@ -83,7 +90,7 @@ class _DeliveryMenuState extends State<DeliveryMenu> {
                       ),
 
                       SizedBox(width: 4,),
-                      Text("08967543"),
+                      Text("0771358056"),
                 
                     ],
                   ),
