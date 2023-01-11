@@ -28,9 +28,9 @@ class _MyAppState extends State<MyApp> {
         //home: SignupsScreen(),
         // home: LoginPage(),
         //home: Home1(),
-        //home: LoadingPage(),
+        // home: LoadingPage(),
         home: DeliveryMenu()
-        
+
       );
   }
 }
