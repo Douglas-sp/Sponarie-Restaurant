@@ -11,6 +11,7 @@ class DeliveryMenu extends StatefulWidget {
 }
 
 var Store_Location = ["Wandegeya","Bwaise","Kawempe","Ndejje","Karakaveni","Ntinda"];
+var Favourite = ["coffee","Milk Tea","Tea","Bakery","Pizza","Snacks","Burger"];
 
 class _DeliveryMenuState extends State<DeliveryMenu> {
   @override
@@ -115,7 +116,25 @@ class _DeliveryMenuState extends State<DeliveryMenu> {
                 child: Text(location),
               )
             ).toList(),
-          )
+          ),
+          ListView.builder(
+            itemCount: Favourite.length,
+            itemBuilder: (context, index) {
+              return ListTile(
+                // leading: CircleAvatar(
+                //   backgroundImage: AssetImage("assets/images/pureblack.png"),
+                // ),
+                title: Text(Favourite[index]),
+                // subtitle: Text("12000 UGX",
+                //     style: TextStyle(
+                //     fontWeight: FontWeight.bold,
+                //     fontSize: 15.0,
+                //   ),
+                // ),
+              );
+              
+            }),
+            
         ],
       ),
     );
